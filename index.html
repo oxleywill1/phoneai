@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Gemini Chat (simple)</h3>
+
+    <form method="post" action="gemini.php">
+      <label>Your message:</label><br>
+      <input type="text" name="message"><br><br>
+      <input type="submit" value="Send">
+    </form>
+
+    <?php if (isset($_GET["reply"])): ?>
+      <hr>
+      <b>Reply:</b><br>
+      <pre><?php echo htmlspecialchars($_GET["reply"]); ?></pre>
+    <?php endif; ?>
+  </body>
+</html>
